@@ -6,7 +6,7 @@ namespace Galindo_Fernando_primera_aplicación_web.Repositorio
 {
     public class EquipoRepository
     {
-        private readonly List<Equipo> _equipos; 
+        private readonly List<Equipo> _equipos;
 
         public EquipoRepository()
         {
