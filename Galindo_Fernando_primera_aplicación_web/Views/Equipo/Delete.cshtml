@@ -1,0 +1,57 @@
+@model Galindo_Fernando_primera_aplicación_web.Models.Equipo
+
+@{
+    ViewData["Title"] = "Eliminar Equipo";
+}
+
+<h1>Eliminar Equipo</h1>
+
+<h3>¿Estás seguro de que quieres eliminar este equipo?</h3>
+<div>
+    <h4>Equipo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PartidosJugados)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PartidosJugados)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PartidosGanados)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PartidosGanados)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PartidosEmpatados)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PartidosEmpatados)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PartidosPerdidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PartidosPerdidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalPuntos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TotalPuntos)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="List">Volver a la Lista</a>
+    </form>
+</div>

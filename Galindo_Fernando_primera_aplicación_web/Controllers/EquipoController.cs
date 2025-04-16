@@ -10,7 +10,7 @@ public class EquipoController : Controller
 
     public EquipoController()
     {
-        _equipoRepository = new EquipoRepository(); // Considera usar Inyección de Dependencias
+        _equipoRepository = new EquipoRepository(); 
         
         
     }
@@ -21,83 +21,83 @@ public class EquipoController : Controller
         return View(equipos);
     }
 
-    // Acción para mostrar el formulario de creación
+    
     public IActionResult Create()
     {
-        return View(); // Necesitarás una vista llamada Create.cshtml
+        return View(); 
     }
 
-    // Acción para procesar el envío del formulario de creación
+    
     [HttpPost]
     public IActionResult Create(Equipo equipo)
     {
         if (ModelState.IsValid)
         {
-            _equipoRepository.AgregarEquipo(equipo); // Implementa este método en tu repositorio
+            _equipoRepository.AgregarEquipo(equipo); 
             return RedirectToAction("List");
         }
-        return View(equipo); // Vuelve a la vista con errores si el modelo no es válido
+        return View(equipo); 
     }
 
-    // Acción para mostrar el formulario de edición
+   
     public IActionResult EditarEquipos(int id)
     {
-        var equipo = _equipoRepository.ObtenerEquipoPorId(id); // Implementa este método
+        var equipo = _equipoRepository.ObtenerEquipoPorId(id); 
         if (equipo == null)
         {
             return NotFound();
         }
-        return View(equipo); // Necesitarás una vista llamada EditarEquipos.cshtml
+        return View(equipo); 
     }
 
-    // Acción para procesar el envío del formulario de edición
+    
     [HttpPost]
     public IActionResult EditarEquipos(int id, Equipo equipo)
     {
         if (ModelState.IsValid)
         {
             equipo.Id = id;
-            _equipoRepository.ActualizarEquipo(equipo); // Implementa este método
+            _equipoRepository.ActualizarEquipo(equipo); 
             return RedirectToAction("List");
         }
         return View(equipo);
     }
 
-    // Acción para mostrar los detalles de un equipo
+    
     public IActionResult Details(int? id)
     {
         if (id == null)
         {
             return NotFound();
         }
-        var equipo = _equipoRepository.ObtenerEquipoPorId(id.Value); // Implementa este método
+        var equipo = _equipoRepository.ObtenerEquipoPorId(id.Value); 
         if (equipo == null)
         {
             return NotFound();
         }
-        return View(equipo); // Necesitarás una vista llamada Details.cshtml
+        return View(equipo); 
     }
 
-    // Acción para mostrar la confirmación de eliminación
+    
     public IActionResult Delete(int? id)
     {
         if (id == null)
         {
             return NotFound();
         }
-        var equipo = _equipoRepository.ObtenerEquipoPorId(id.Value); // Implementa este método
+        var equipo = _equipoRepository.ObtenerEquipoPorId(id.Value); 
         if (equipo == null)
         {
             return NotFound();
         }
-        return View(equipo); // Necesitarás una vista llamada Delete.cshtml
+        return View(equipo); 
     }
 
-    // Acción para procesar la eliminación
+    
     [HttpPost, ActionName("Delete")]
     public IActionResult DeleteConfirmed(int id)
     {
-        _equipoRepository.EliminarEquipo(id); // Implementa este método
+        _equipoRepository.EliminarEquipo(id); 
         return RedirectToAction("List");
     }
 }

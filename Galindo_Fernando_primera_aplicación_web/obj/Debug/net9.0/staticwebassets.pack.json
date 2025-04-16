@@ -21,10 +21,6 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/Users/fernangal2004/Desktop/Programacion_IV_Galindo_Fernando/Galindo_Fernando_Primera_Aplicacion/Galindo_Fernando_primera_aplicación_web/wwwroot/favicon.ico",
-      "PackagePath": "staticwebassets/favicon.ico"
-    },
-    {
       "Id": "/Users/fernangal2004/Desktop/Programacion_IV_Galindo_Fernando/Galindo_Fernando_Primera_Aplicacion/Galindo_Fernando_primera_aplicación_web/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

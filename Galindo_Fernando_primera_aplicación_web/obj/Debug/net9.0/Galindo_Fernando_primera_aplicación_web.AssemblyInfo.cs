@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Galindo_Fernando_primera_aplicación_web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ecd3e26cacefcbb2af8dc26f21164e43e916c82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09243940f1e931c7ed6080b891c306e053a5fab8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Galindo_Fernando_primera_aplicación_web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Galindo_Fernando_primera_aplicación_web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
