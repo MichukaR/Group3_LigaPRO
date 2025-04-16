@@ -20,20 +20,20 @@ namespace Galindo_Fernando_primera_aplicación_web.Repositorio
                 new Equipo { Id = 6, Nombre = "U. Católica", PartidosJugados = 10, PartidosGanados = 5, PartidosEmpatados = 4, PartidosPerdidos = 1 },
                 new Equipo { Id = 7, Nombre = "Delfín", PartidosJugados = 10, PartidosGanados = 4, PartidosEmpatados = 3, PartidosPerdidos = 3 },
                 new Equipo { Id = 8, Nombre = "Técnico Universitario", PartidosJugados = 10, PartidosGanados = 3, PartidosEmpatados = 4, PartidosPerdidos = 3 },
-                new Equipo { Id = 9, Nombre = "El Nacional", PartidosJugados = 10, PartidosGanados = 3, PartidosEmpatados = 3, PartidosPerdidos = 4 },
-                new Equipo { Id = 10, Nombre = "Orense", PartidosJugados = 10, PartidosGanados = 2, PartidosEmpatados = 3, PartidosPerdidos = 5 },
-                new Equipo { Id = 11, Nombre = "Deportivo Cuenca", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 4, PartidosPerdidos = 5 },
-                new Equipo { Id = 12, Nombre = "Libertad", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 3, PartidosPerdidos = 6 },
-                new Equipo { Id = 13, Nombre = "Mushuc Runa", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 3, PartidosPerdidos = 6 },
-                new Equipo { Id = 14, Nombre = "Imbabura", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 2, PartidosPerdidos = 7 },
-                new Equipo { Id = 15, Nombre = "Cumbayá", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 2, PartidosPerdidos = 7 },
-                new Equipo { Id = 16, Nombre = "Guayaquil City", PartidosJugados = 10, PartidosGanados = 0, PartidosEmpatados = 3, PartidosPerdidos = 7 }
+                new Equipo { Id = 9, Nombre = "El Nacional", PartidosJugados = 10, PartidosGanados = 3, PartidosEmpatados = 3, PartidosPerdidos = 4},
+                new Equipo { Id = 10, Nombre = "Orense", PartidosJugados = 10, PartidosGanados = 2, PartidosEmpatados = 3, PartidosPerdidos = 5},
+                new Equipo { Id = 11, Nombre = "Deportivo Cuenca", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 4, PartidosPerdidos = 5},
+                new Equipo { Id = 12, Nombre = "Libertad", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 3, PartidosPerdidos = 6},
+                new Equipo { Id = 13, Nombre = "Mushuc Runa", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 3, PartidosPerdidos = 6},
+                new Equipo { Id = 14, Nombre = "Imbabura", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 2, PartidosPerdidos = 7},
+                new Equipo { Id = 15, Nombre = "Cumbayá", PartidosJugados = 10, PartidosGanados = 1, PartidosEmpatados = 2, PartidosPerdidos = 7},
+                new Equipo { Id = 16, Nombre = "Guayaquil City", PartidosJugados = 10, PartidosGanados = 0, PartidosEmpatados = 3, PartidosPerdidos = 7}
             };
         }
 
         public IEnumerable<Equipo> DevuelveListadoEquipos()
         {
-            return _equipos.OrderByDescending(e => e.TotalPuntos).ToList(); 
+            return _equipos.OrderByDescending(e => e.TotalPuntos).ToList();
         }
 
         public Equipo ObtenerEquipoPorId(int id)
@@ -43,7 +43,6 @@ namespace Galindo_Fernando_primera_aplicación_web.Repositorio
 
         public void AgregarEquipo(Equipo equipo)
         {
-            // Simulación de asignar un nuevo ID (en una base de datos esto sería automático)
             if (_equipos.Any())
             {
                 equipo.Id = _equipos.Max(e => e.Id) + 1;
