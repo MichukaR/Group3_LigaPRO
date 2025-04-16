@@ -11,7 +11,7 @@ namespace Galindo_Fernando_primera_aplicación_web.Models
         [MaxLength(100)]
         public string Nombre { get; set; }
         [Range(0,20)]
-        [DisplayName("Ingrese su nombre: ")]
+        
         public int PartidosJugados {  get; set; }
         [Range(0, 20)]
         public int PartidosGanados { get; set; }
