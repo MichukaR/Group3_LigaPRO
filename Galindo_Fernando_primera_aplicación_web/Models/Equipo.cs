@@ -27,5 +27,6 @@ namespace Galindo_Fernando_primera_aplicación_web.Models
                 return PartidosGanados * 3 + PartidosEmpatados;
             }
         }
+        public ICollection<Jugador> Jugadores { get; set; } = new List<Jugador>();
     }
 }
